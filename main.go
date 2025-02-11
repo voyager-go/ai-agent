@@ -53,6 +53,8 @@ func main() {
 
 func init() {
 	db.InitDbConnect()
+	//db.CreateTables()
+	//db.GenerateMockData()
 }
 
 // 显示帮助信息
