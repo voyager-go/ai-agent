@@ -36,8 +36,8 @@ func main() {
 			color.Red("下次再见哦 (#^.^#)")
 			return
 		default:
-			color.Yellow("处理中，请稍候~")
 			agent.NewReactAgent(ctx).Invoke(ctx, input)
+			//agent.NewAgent(ctx).Invoke(ctx, input)
 		}
 	}
 }
