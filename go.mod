@@ -3,9 +3,9 @@ module ai-agent
 go 1.23.4
 
 require (
-	github.com/cloudwego/eino v0.3.8
-	github.com/cloudwego/eino-examples/quickstart/eino_assistant v0.0.0-20250208134407-75de62639cc1
-	github.com/cloudwego/eino-ext/components/model/openai v0.0.0-20250208101713-241b89a45552
+	github.com/cloudwego/eino v0.3.9
+	github.com/cloudwego/eino-ext/components/model/openai v0.0.0-20250114173536-ca9322ed9f9a
+	github.com/fatih/color v1.18.0
 	github.com/go-sql-driver/mysql v1.8.1
 )
 
@@ -16,7 +16,6 @@ require (
 	github.com/cloudwego/base64x v0.1.4 // indirect
 	github.com/cloudwego/eino-ext/libs/acl/openai v0.0.0-20250208100047-4b90fcb10809 // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
-	github.com/fatih/color v1.18.0 // indirect
 	github.com/getkin/kin-openapi v0.118.0 // indirect
 	github.com/go-openapi/jsonpointer v0.19.5 // indirect
 	github.com/go-openapi/swag v0.19.5 // indirect

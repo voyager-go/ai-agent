@@ -19,10 +19,6 @@ func main() {
 	reader := bufio.NewReader(os.Stdin)
 
 	ctx := context.Background()
-	aiAgent, err := agent.NewAgent(ctx)
-	if err != nil {
-		panic(err)
-	}
 	for {
 		fmt.Print("\n> ")
 		input, err := reader.ReadString('\n')
@@ -41,12 +37,7 @@ func main() {
 			return
 		default:
 			color.Yellow("处理中，请稍候~")
-			resp, _ := aiAgent.Invoke(ctx, input)
-			//if err != nil {
-			//	panic(err)
-			//}
-
-			fmt.Println(resp)
+			agent.NewReactAgent(ctx).Invoke(ctx, input)
 		}
 	}
 }

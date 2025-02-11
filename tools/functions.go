@@ -3,6 +3,7 @@ package tools
 import (
 	"ai-agent/db"
 	"context"
+	"errors"
 	"fmt"
 	"strings"
 )
@@ -41,6 +42,9 @@ func QueryUserInfoFunc(_ context.Context, req *QueryUserInfoCondition) (string, 
 	users, err := db.QueryUserByName(req.UserName)
 	if err != nil {
 		panic("查询异常: " + err.Error())
+	}
+	if len(users) == 0 {
+		return "", errors.New("未查询到" + req.UserName + "的信息")
 	}
 	fmt.Println(strings.Repeat("=", 80))
 	fmt.Printf("%-5s %-20s %-25s %s\n", "工号", "姓名", "邮箱", "年龄")
